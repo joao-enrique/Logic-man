@@ -1,0 +1,83 @@
+[gd_scene load_steps=15 format=3 uid="uid://cpayw34ddaql1"]
+
+[ext_resource type="Script" path="res://Scenes/mobileControls.gd" id="1_eablm"]
+[ext_resource type="Texture2D" uid="uid://d0efeadrapa8" path="res://Assets/UI/TouchUIButton/Idle.png" id="3_b4221"]
+[ext_resource type="Texture2D" uid="uid://ctws7kr43gs8i" path="res://Assets/UI/TouchUIButton/Up.png" id="4_scm0c"]
+[ext_resource type="Texture2D" uid="uid://c2dkjh5pl8oiw" path="res://Assets/UI/TouchUIButton/Down.png" id="5_i5isj"]
+[ext_resource type="Texture2D" uid="uid://cw6di6ecowpo" path="res://Assets/UI/TouchUIButton/Left.png" id="5_me00n"]
+[ext_resource type="Texture2D" uid="uid://bou4oj6v02gdk" path="res://Assets/UI/TouchUIButton/Right.png" id="6_t4owg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8db82"]
+atlas = ExtResource("3_b4221")
+region = Rect2(191.004, 2.93646, 248.685, 185.596)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57e0w"]
+atlas = ExtResource("4_scm0c")
+region = Rect2(193.441, 3.99989, 247.559, 183.637)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8d7m"]
+atlas = ExtResource("3_b4221")
+region = Rect2(193.94, 440.036, 246.06, 183.964)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n31dw"]
+atlas = ExtResource("5_i5isj")
+region = Rect2(193.3, 440.525, 246.4, 183.7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5erte"]
+atlas = ExtResource("3_b4221")
+region = Rect2(4.76585, 192.433, 184.019, 243.818)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iabb0"]
+atlas = ExtResource("5_me00n")
+region = Rect2(4.01257, 191.266, 184.477, 244.928)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yliv3"]
+atlas = ExtResource("3_b4221")
+region = Rect2(445, 192, 182, 243)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rri3r"]
+atlas = ExtResource("6_t4owg")
+region = Rect2(445.5, 193, 182, 242)
+
+[node name="mobileControls" type="CanvasLayer"]
+script = ExtResource("1_eablm")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 295
+theme_override_constants/margin_bottom = 370
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="BtnUp" type="TouchScreenButton" parent="MarginContainer/Control"]
+position = Vector2(-32.835, -317)
+texture_normal = SubResource("AtlasTexture_8db82")
+texture_pressed = SubResource("AtlasTexture_57e0w")
+action = "up"
+visibility_mode = 1
+
+[node name="BtnDown" type="TouchScreenButton" parent="MarginContainer/Control"]
+position = Vector2(-29.975, 121.92)
+texture_normal = SubResource("AtlasTexture_u8d7m")
+texture_pressed = SubResource("AtlasTexture_n31dw")
+action = "down"
+visibility_mode = 1
+
+[node name="BtnLeft" type="TouchScreenButton" parent="MarginContainer/Control"]
+position = Vector2(-220.32, -128.115)
+texture_normal = SubResource("AtlasTexture_5erte")
+texture_pressed = SubResource("AtlasTexture_iabb0")
+action = "left"
+
+[node name="BtnRight" type="TouchScreenButton" parent="MarginContainer/Control"]
+position = Vector2(222.44, -130.11)
+texture_normal = SubResource("AtlasTexture_yliv3")
+texture_pressed = SubResource("AtlasTexture_rri3r")
+action = "right"

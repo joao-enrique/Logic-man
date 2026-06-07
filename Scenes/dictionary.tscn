@@ -1,0 +1,478 @@
+[gd_scene load_steps=13 format=3 uid="uid://bmrq3cmna6afy"]
+
+[ext_resource type="Script" path="res://Scenes/dictionary.gd" id="1_qx7qx"]
+[ext_resource type="FontFile" uid="uid://ccnln6n4c0g54" path="res://Assets/Fonts/upheavtt.ttf" id="1_to6kx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oshra"]
+bg_color = Color(0.6, 0.0235294, 0.6, 0.282353)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0.2, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rnvvb"]
+border_width_top = 3
+border_color = Color(0.8, 0.8, 0.305882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rqmwo"]
+border_width_top = 3
+border_color = Color(0.8, 0.8, 0.305882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1l7g"]
+border_width_top = 3
+border_color = Color(0.8, 0.8, 0.305882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fbsr"]
+border_width_top = 3
+border_color = Color(0.8, 0.8, 0.305882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2p2j"]
+border_width_top = 3
+border_color = Color(0.8, 0.8, 0.305882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tob8s"]
+border_width_top = 3
+border_color = Color(0.8, 0.8, 0.305882, 1)
+
+[sub_resource type="Animation" id="Animation_4g75b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/MarginContainer/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/MarginContainer/VBoxContainer/conectivoNeg:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/MarginContainer/VBoxContainer/conectivoOUOU:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/MarginContainer/VBoxContainer/conectivoE:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Panel/MarginContainer/VBoxContainer/conectivoOU:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Panel/MarginContainer/VBoxContainer/conectivoSE:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Panel/MarginContainer/VBoxContainer/conectivoSEESE:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Panel/MarginContainer:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Panel:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ymvn1"]
+resource_name = "main"
+length = 6.0
+step = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/MarginContainer/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/MarginContainer/VBoxContainer/conectivoNeg:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/MarginContainer/VBoxContainer/conectivoOUOU:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/MarginContainer/VBoxContainer/conectivoE:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Panel/MarginContainer/VBoxContainer/conectivoOU:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Panel/MarginContainer/VBoxContainer/conectivoSE:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Panel/MarginContainer/VBoxContainer/conectivoSEESE:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Panel/MarginContainer:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(5.2, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Panel:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(5.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l8h6x"]
+_data = {
+"RESET": SubResource("Animation_4g75b"),
+"main": SubResource("Animation_ymvn1")
+}
+
+[node name="Dictionary" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qx7qx")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(900, 980)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oshra")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 3
+
+[node name="Label" type="Label" parent="Panel/MarginContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 42
+text = "Dicionários de conectivos lógicos"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="conectivoE" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoE"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 38
+text = "∧ "
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer/conectivoE"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_rnvvb")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoE"]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 37
+text = " E"
+
+[node name="conectivoNeg" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoNeg"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 37
+text = "¬ "
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer/conectivoNeg"]
+custom_minimum_size = Vector2(630, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_rqmwo")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoNeg"]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 28
+text = " NEGAÇÃO"
+
+[node name="conectivoOU" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoOU"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 38
+text = "∨ "
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer/conectivoOU"]
+custom_minimum_size = Vector2(687.655, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_n1l7g")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoOU"]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 32
+text = " OU"
+
+[node name="conectivoOUOU" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoOUOU"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 38
+text = "⊕"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer/conectivoOUOU"]
+custom_minimum_size = Vector2(600.455, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_6fbsr")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoOUOU"]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 32
+text = " OU... OU..."
+
+[node name="conectivoSE" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoSE"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 38
+text = "⇒ "
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer/conectivoSE"]
+custom_minimum_size = Vector2(556.79, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_y2p2j")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoSE"]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 32
+text = " SE...ENTÂO"
+
+[node name="conectivoSEESE" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoSEESE"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 38
+text = "⇔ "
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer/conectivoSEESE"]
+custom_minimum_size = Vector2(465.55, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_tob8s")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoSEESE"]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_to6kx")
+theme_override_font_sizes/font_size = 32
+text = " SE...SOMENTE SE"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l8h6x")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

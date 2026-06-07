@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwyxalhjbj23x"]
+
+[ext_resource type="Script" path="res://Scenes/RespostaSlot.gd" id="1_6qrry"]
+[ext_resource type="FontFile" uid="uid://ccnln6n4c0g54" path="res://Assets/Fonts/upheavtt.ttf" id="2_mibc7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_74akl"]
+bg_color = Color(0.815686, 0.337255, 0.886275, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.596078, 0.133333, 0.6, 1)
+
+[node name="RespostaSlot" type="Panel"]
+custom_minimum_size = Vector2(90, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_74akl")
+script = ExtResource("1_6qrry")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_mibc7")
+theme_override_font_sizes/font_size = 27
+horizontal_alignment = 1
+vertical_alignment = 1

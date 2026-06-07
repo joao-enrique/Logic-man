@@ -1,0 +1,292 @@
+[gd_scene load_steps=14 format=3 uid="uid://bhpjbybb2nwpc"]
+
+[ext_resource type="Script" path="res://Scenes/dictionary_button.gd" id="1_keysj"]
+[ext_resource type="FontFile" uid="uid://ccnln6n4c0g54" path="res://Assets/Fonts/upheavtt.ttf" id="2_olahm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oshra"]
+bg_color = Color(0.6, 0.0235294, 0.6, 0.282353)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0.2, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rnvvb"]
+border_width_top = 3
+border_color = Color(0.8, 0.8, 0.305882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rqmwo"]
+border_width_top = 3
+border_color = Color(0.8, 0.8, 0.305882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1l7g"]
+border_width_top = 3
+border_color = Color(0.8, 0.8, 0.305882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fbsr"]
+border_width_top = 3
+border_color = Color(0.8, 0.8, 0.305882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2p2j"]
+border_width_top = 3
+border_color = Color(0.8, 0.8, 0.305882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tob8s"]
+border_width_top = 3
+border_color = Color(0.8, 0.8, 0.305882, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygqfl"]
+bg_color = Color(0.32549, 0.0588235, 0.309804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.25098, 0.8, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_un1ht"]
+bg_color = Color(0.470588, 0.105882, 0.45098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.321569, 0.0313726, 0.32549, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_alpwr"]
+bg_color = Color(0.282353, 0.0470588, 0.270588, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.321569, 0.0313726, 0.32549, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1mw57"]
+
+[node name="Dictionary" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_keysj")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(900, 889.965)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -504.0
+offset_right = 450.0
+offset_bottom = 386.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_oshra")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 3
+
+[node name="Label" type="Label" parent="Panel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 42
+text = "Dicionários de conectivos lógicos"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="conectivoE" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoE"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 38
+text = "∧ "
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer/conectivoE"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_rnvvb")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoE"]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 37
+text = " E"
+
+[node name="conectivoNeg" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoNeg"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 37
+text = "¬ "
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer/conectivoNeg"]
+custom_minimum_size = Vector2(630, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_rqmwo")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoNeg"]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 28
+text = " NEGAÇÃO"
+
+[node name="conectivoOU" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoOU"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 38
+text = "∨ "
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer/conectivoOU"]
+custom_minimum_size = Vector2(687.655, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_n1l7g")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoOU"]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 32
+text = " OU"
+
+[node name="conectivoOUOU" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoOUOU"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 38
+text = "⊕"
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer/conectivoOUOU"]
+custom_minimum_size = Vector2(600.455, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_6fbsr")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoOUOU"]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 32
+text = " OU... OU..."
+
+[node name="conectivoSE" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoSE"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 38
+text = "⇒ "
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer/conectivoSE"]
+custom_minimum_size = Vector2(556.79, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_y2p2j")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoSE"]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 32
+text = " SE...ENTÂO"
+
+[node name="conectivoSEESE" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoSEESE"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 38
+text = "⇔ "
+
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer/conectivoSEESE"]
+custom_minimum_size = Vector2(465.55, 0)
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_tob8s")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/conectivoSEESE"]
+texture_filter = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 32
+text = " SE...SOMENTE SE"
+
+[node name="BackButton" type="Button" parent="."]
+custom_minimum_size = Vector2(650, 100)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -446.0
+offset_top = -132.0
+offset_right = 444.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_olahm")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/normal = SubResource("StyleBoxFlat_ygqfl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_un1ht")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_alpwr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1mw57")
+text = "VOLTAR"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

@@ -1,0 +1,198 @@
+[gd_scene load_steps=16 format=3 uid="uid://be0xoabl0kaqg"]
+
+[ext_resource type="PackedScene" uid="uid://dwyxalhjbj23x" path="res://Scenes/resposta_slot.tscn" id="1_7nywy"]
+[ext_resource type="Script" path="res://Scenes/porta_scene.gd" id="1_gtjs3"]
+[ext_resource type="FontFile" uid="uid://ccnln6n4c0g54" path="res://Assets/Fonts/upheavtt.ttf" id="2_g8150"]
+[ext_resource type="Texture2D" uid="uid://dlv7llrsibayj" path="res://Assets/Door/tilemap_packed.png" id="2_qlk7m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcfy5"]
+atlas = ExtResource("2_qlk7m")
+region = Rect2(96, 128, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvqle"]
+atlas = ExtResource("2_qlk7m")
+region = Rect2(96, 144, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqyya"]
+atlas = ExtResource("2_qlk7m")
+region = Rect2(96, 160, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpkwo"]
+atlas = ExtResource("2_qlk7m")
+region = Rect2(96, 176, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tf7ls"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcfy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvqle")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqyya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpkwo")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65jp8"]
+bg_color = Color(0.964706, 0.337255, 0.580392, 0.133333)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0, 0.4, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w3mxd"]
+bg_color = Color(0.32549, 0.0588235, 0.309804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.25098, 0.8, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtdqn"]
+bg_color = Color(0.470588, 0.105882, 0.45098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.321569, 0.0313726, 0.32549, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxuuq"]
+bg_color = Color(0.282353, 0.0470588, 0.270588, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.321569, 0.0313726, 0.32549, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_facpv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_asoro"]
+
+[node name="PortaScene" type="CanvasLayer"]
+script = ExtResource("1_gtjs3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_bottom = 60
+
+[node name="LabelPergunta" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_g8150")
+theme_override_font_sizes/font_size = 40
+text = "Arraste o símbolo correto para completar a comparação."
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(330.515, -141)
+scale = Vector2(11.6562, 15.75)
+sprite_frames = SubResource("SpriteFrames_tf7ls")
+
+[node name="HBoxContainerExpressao" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerExpressao"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_g8150")
+theme_override_font_sizes/font_size = 39
+text = "P "
+
+[node name="RespostaSlot" parent="MarginContainer/VBoxContainer/HBoxContainerExpressao" instance=ExtResource("1_7nywy")]
+custom_minimum_size = Vector2(95.17, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerExpressao"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_g8150")
+theme_override_font_sizes/font_size = 39
+text = " Q = F"
+
+[node name="HBoxContainerConectivos" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(672, 182)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainerConectivos"]
+custom_minimum_size = Vector2(672, 182)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_65jp8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainerConectivos/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="DictionaryButton" type="Button" parent="MarginContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(672, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_g8150")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxFlat_w3mxd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xtdqn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lxuuq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_facpv")
+text = "DICIONÁRIOS DE CONECTIVOS?"
+
+[node name="ButtonConfirmar" type="Button" parent="MarginContainer"]
+custom_minimum_size = Vector2(342, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_g8150")
+theme_override_font_sizes/font_size = 53
+theme_override_styles/normal = SubResource("StyleBoxFlat_w3mxd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xtdqn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lxuuq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_asoro")
+text = "Confirmar"
+
+[connection signal="animation_finished" from="MarginContainer/VBoxContainer/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/DictionaryButton" to="." method="_on_dictionary_button_pressed"]
+[connection signal="pressed" from="MarginContainer/ButtonConfirmar" to="." method="_on_button_confirmar_pressed"]
